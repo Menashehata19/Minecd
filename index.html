@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
   
@@ -88,6 +89,55 @@
 
 
 
+<div class="w3-content" style="max-width:800px">
+  
+  <img class="mySlides" src="https://apkbaba.co/wp-content/uploads/%D9%85%D8%A7%D9%8A%D9%86%D9%83%D8%B1%D8%A7%D9%81%D8%AA-%D8%A8%D9%88%D9%83%D9%8A%D8%AA-%D8%A5%D9%8A%D8%AF%D9%8A%D8%B4%D9%8A%D9%86-img-1-apkbaba.webp" style="width:100%">
+  
+  
+  <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm9DWTvpCIfvTA-TPEJU80fFfDGMObP-bbEDWJgL23RejZF2oqlQHGE4TGp5xGb95-zXc&usqp=CAU" style="width:100%">
+  <img class="mySlides" src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Trails-and-Tales_1280x768.jpg" style="width:100%">
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+  </div>
+  <button class="w3-button demo" onc>1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+</script>
+
+
 
 
 <p class="maqlq">
@@ -141,6 +191,9 @@
   <img onclick="location.href='https://wa.me/+201270144885'" class="iconsocial"  src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="">
   </div>
   
+  
+
+  
   <div>
     
     
@@ -154,12 +207,18 @@
 
 
 <style>
+.mySlides{
+  border-radius: 10px;
+  height: 200px;
+  width: 90%;
+}
+mySlides {display:none}
 .contact{
   display: flex;
   justify-content: center;
-  background: #919191;
+  background: #F3F3F3;
   margin-top: 27px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 23px 23px 0px 0px;
 }
 .iconsocial{
 width: 50px;
@@ -169,7 +228,7 @@ width: 50px;
 }
 
   .maqlq{
-    color: #F2F2F2;
+    color: #C9C9C9;
     text-align: right;
     margin-top: 30px;
     font-weight: 600;
@@ -177,6 +236,7 @@ width: 50px;
   body{
 background: #131416;
 font-family: sans-serif;
+margin:0px;
 }
 #svgback{
   width: 60px;
